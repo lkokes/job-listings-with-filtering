@@ -1,4 +1,4 @@
-import { data } from "../data";
+import { data } from "../assets/data";
 
 type Props = {};
 
@@ -15,7 +15,10 @@ const Job = (props: Props) => {
           >
             <p key={jobItem.company}>{data[i].company}</p>
             <p key={jobItem.logo}>
-              <img src={data[i].logo} alt="text" />
+              <img
+                src={require("../assets/images/" + data[i].logo + ".svg")}
+                alt="text"
+              />
             </p>
             <p key={jobItem.position}>{data[i].position}</p>
             <p key={jobItem.role}>{data[i].role}</p>
