@@ -1,10 +1,10 @@
 import "./App.css";
-import Job from "./components/Job";
+import JobItem from "./components/JobItem";
 
 function App() {
   return (
     <div className="App">
-      <Job />
+      <JobItem />
     </div>
   );
 }

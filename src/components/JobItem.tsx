@@ -1,10 +1,8 @@
 import { data } from "../assets/data";
 
-type Props = {};
-
-const Job = (props: Props) => {
+const JobItem = () => {
   return (
-    <div>
+    <>
       {data.map((jobItem, i) => {
         return (
           <div
@@ -31,8 +29,8 @@ const Job = (props: Props) => {
           </div>
         );
       })}
-    </div>
+    </>
   );
 };
 
-export default Job;
+export default JobItem;
