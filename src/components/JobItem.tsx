@@ -5,27 +5,41 @@ const JobItem = () => {
     <>
       {data.map((jobItem, i) => {
         return (
-          <div
-            style={{
-              padding: "25px 50px",
-            }}
-            key={jobItem.id}
-          >
-            <p key={jobItem.company}>{data[i].company}</p>
-            <p key={jobItem.logo}>
-              <img
-                src={require("../assets/images/" + data[i].logo + ".svg")}
-                alt="text"
-              />
-            </p>
-            <p key={jobItem.position}>{data[i].position}</p>
-            <p key={jobItem.role}>{data[i].role}</p>
-            <p key={jobItem.level}>{data[i].level}</p>
-            <p key={jobItem.postedAt}>{data[i].postedAt}</p>
-            <p key={jobItem.contract}>{data[i].contract}</p>
-            <p key={jobItem.location}>{data[i].location}</p>
-            {/* <p key={jobItem.languages}>{data[i].languages}</p>
-            <p key={jobItem.tools}>{data[i].tools}</p> */}
+          <div key={jobItem.id} id="container">
+            <img
+              key={jobItem.logo}
+              src={require("../assets/images/" +
+                data[i].logo.slice(9, -4) +
+                ".svg")}
+              alt="text"
+            />
+            <div id="item-middle">
+              <p key={jobItem.company} id="company">
+                {data[i].company}
+              </p>
+              <p key={jobItem.position} id="position">
+                {data[i].position}
+              </p>
+              <div id="item-times">
+                <p key={jobItem.postedAt}>{data[i].postedAt}</p>
+                <p key={jobItem.contract}>{data[i].contract}</p>
+                <p key={jobItem.location}>{data[i].location}</p>
+              </div>
+            </div>
+            <div id="item-filters">
+              <p key={jobItem.role}>{data[i].role}</p>
+              <p key={jobItem.level}>{data[i].level}</p>
+              {data[i].languages.map((languageItem, j) => {
+                return (
+                  <p key={jobItem.languages.toString()}>
+                    {data[i].languages[j]}
+                  </p>
+                );
+              })}
+              {data[i].tools.map((toolsItem, k) => {
+                return <p key={jobItem.tools.toString()}>{data[i].tools[k]}</p>;
+              })}
+            </div>
           </div>
         );
       })}
