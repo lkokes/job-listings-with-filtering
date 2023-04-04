@@ -11,7 +11,7 @@ body{
     font-size: 15px;
 }
 
-div#container {
+#container {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -30,21 +30,21 @@ p {
     width: max-content;
 }
 
-p#company {
+#company {
     color: hsl(180, 29%, 50%);
 }
 
-p#position {
+#position {
    color: hsl(180, 14%, 20%);
 }
 
-div#item-middle {
+#item-middle {
     display: flex;
     flex-direction: column;
     width: 80%;
 }
 
-div#item-times {
+#item-times {
     display: flex;
     width: 65%;
     flex-direction: row;
@@ -53,14 +53,40 @@ div#item-times {
     color: #9d9d9d;
 }
 
-div#item-filters {
+#item-filters {
     display: flex;
     width: 70%;
     justify-content: flex-end;
 }
 
-div#item-filters p {
+#item-filters p {
     background-color: hsl(180, 31%, 95%);
     color: hsl(180, 29%, 50%);
     padding: 5px;
+}
+
+@media only screen and (max-width: 1200px) {
+    #container {
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 10%;
+        height: 210px;
+    }
+
+    img {
+        position: relative;
+        top: -60px;
+        left: -200px;
+    }
+
+    #item-middle {
+        margin: -10%;
+        border-bottom: #9d9d9d solid 2px;
+    }
+    
+    #item-filters {
+        width: 82%;
+        padding-top: 10%;
+        justify-content: flex-start;
+    }
 }
