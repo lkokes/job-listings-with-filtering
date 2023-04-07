@@ -65,7 +65,7 @@ p {
     padding: 5px;
 }
 
-@media only screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
     #container {
         flex-wrap: wrap;
         flex-direction: column;
@@ -75,8 +75,8 @@ p {
 
     img {
         position: relative;
-        top: -60px;
-        left: -200px;
+        top: -30%;
+        left: -33%;
     }
 
     #item-middle {
@@ -87,6 +87,61 @@ p {
     #item-filters {
         width: 82%;
         padding-top: 10%;
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    img {
+        position: relative;
+        top: -20%;
+        left: -30%;
+    }
+
+    #container {
+        height: 230px;
+        width: 84%;
+    }
+
+    #item-filters {
+        width: 84%;
+        justify-content: flex-start;
+        flex-flow: wrap;
+    }
+    
+}
+
+@media screen and (max-width: 610px) {
+    #container {
+        margin: 13% 5%;
+        height: 240px;
+        width: 94%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    img {
+        position: relative;
+        top: -15%;
+        left: -20%;
+    }
+
+    #container {
+        margin: 20% 5%;
+        height: 240px;
+        width: 100%;
+    }
+
+    #item-times {
+        width: 100%;
+    }
+
+    #item-filters {
+        width: 84%;
+        margin-top: 5%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
         justify-content: flex-start;
     }
 }
