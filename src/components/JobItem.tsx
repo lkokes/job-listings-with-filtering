@@ -14,9 +14,13 @@ const JobItem = () => {
               alt="text"
             />
             <div id="item-middle">
-              <p key={jobItem.company} id="company">
-                {data[i].company}
-              </p>
+              <div id="first-line">
+                <p key={jobItem.company} id="company">
+                  {data[i].company}
+                </p>
+                {data[i].new && <p className="new">NEW!</p>}
+                {data[i].featured && <p className="featured">FEATURED</p>}
+              </div>
               <p key={jobItem.position} id="position">
                 {data[i].position}
               </p>

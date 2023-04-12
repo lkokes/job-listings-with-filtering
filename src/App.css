@@ -30,6 +30,23 @@ p {
     width: max-content;
 }
 
+p.new, p.featured {
+    background-color: hsl(180, 29%, 50%);
+    color: white;
+    height: 20px;
+    width: 33px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    font-size: 11px;
+}
+
+p.featured {
+    background-color: hsl(180, 14%, 20%);
+    width: 55px;
+}
+
 #company {
     color: hsl(180, 29%, 50%);
 }
@@ -42,6 +59,13 @@ p {
     display: flex;
     flex-direction: column;
     width: 80%;
+}
+
+#first-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 #item-times {
