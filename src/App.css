@@ -19,6 +19,12 @@ body{
     width: 75%;
     background-color: #fff;
     box-shadow: 0px 5px 15px -6px rgba(104,183,153,1);
+    border-radius: 10px;
+}
+
+#container:hover {
+    box-shadow: -8px 0px 0px -4px rgba(104,183,153,1);
+    cursor: pointer;
 }
 
 img {
@@ -28,6 +34,7 @@ img {
 p {
     margin: 2%;
     width: max-content;
+    font-weight: 700;
 }
 
 p.new, p.featured {
@@ -77,6 +84,10 @@ p.featured {
     color: #9d9d9d;
 }
 
+#item-times p {
+    font-weight: 500;
+}
+
 #item-filters {
     display: flex;
     width: 70%;
@@ -86,7 +97,15 @@ p.featured {
 #item-filters p {
     background-color: hsl(180, 31%, 95%);
     color: hsl(180, 29%, 50%);
-    padding: 5px;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+#item-filters p:hover {
+    background-color: hsl(180, 29%, 50%);
+    color: hsl(180, 31%, 95%);
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1200px) {
